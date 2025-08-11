@@ -20,7 +20,8 @@ const OrderSummary = () => {
   };
 
   const createOrder = async () => {
-
+  // Add order creation logic here if needed
+  router.push("/payment");
   }
 
   useEffect(() => {

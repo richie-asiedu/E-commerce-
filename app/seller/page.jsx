@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 const AddProduct = () => {
 
@@ -128,7 +129,7 @@ const AddProduct = () => {
           ADD
         </button>
       </form>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

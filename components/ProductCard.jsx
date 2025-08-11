@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { useAppContext } from '@/context/AppContext';
 
 const ProductCard = ({ product }) => {
-
-    const { currency, router } = useAppContext()
+    const { currency, router } = useAppContext();
+    const [liked, setLiked] = React.useState(false);
 
     return (
         <div
@@ -20,11 +20,19 @@ const ProductCard = ({ product }) => {
                     width={800}
                     height={800}
                 />
-                <button className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md">
+                <button
+                    className={`absolute top-2 right-2 bg-white p-2 rounded-full shadow-md ${liked ? 'border border-orange-500' : ''}`}
+                    onClick={e => {
+                        e.stopPropagation();
+                        setLiked(l => !l);
+                    }}
+                    aria-label={liked ? 'Unlike' : 'Like'}
+                >
                     <Image
                         className="h-3 w-3"
                         src={assets.heart_icon}
                         alt="heart_icon"
+                        style={{ filter: liked ? 'invert(36%) sepia(98%) saturate(749%) hue-rotate(355deg) brightness(104%) contrast(101%)' : 'none' }}
                     />
                 </button>
             </div>
