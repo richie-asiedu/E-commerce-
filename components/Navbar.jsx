@@ -1,7 +1,6 @@
 "use client"
 import React from "react";
-import { SignInButton } from "@clerk/nextjs";
-import { useUser, UserButton } from "@clerk/nextjs";
+import { useUser, UserButton, SignInButton } from "@clerk/nextjs";
 import { assets} from "@/assets/assets";
 import Link from "next/link"
 import { useAppContext } from "@/context/AppContext";
