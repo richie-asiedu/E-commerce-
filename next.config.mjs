@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    basePath: '/E-commerce-',
-    assetPrefix: '/E-commerce-',
     images: {
         remotePatterns: [
             {
